@@ -11,8 +11,12 @@ relational database.
 
 This section shows how to install the command-line interfaces (CLIs) for Kùzu and DuckDB.
 
-### Kùzu CLI
+### Kùzu CLI Nightly version
+To install the nightly version, go [here](
+https://github.com/kuzudb/kuzu/actions/workflows/build-and-deploy.yml), click on the top most "Build and Deploy" link. Under "Artifacts,
+download the `kuzu_cli_xxx` file for your system. Then you need to uncompress the downloaded file and use the kuzu binary inside it.
 
+### Kùzu CLI Stable version
 To install the Kùzu CLI on MacOS, run:
 
 ```bash
@@ -110,20 +114,24 @@ Open the PDF document "Code for workshop demonstrating the use of Cypher on a fi
 You can visualize the Kùzu graph using the Kùzu Explorer tool. Download and install Docker, and run the
 provided `docker-compose.yml` file to start Kùzu Explorer on your machine. Simply ensure that
 the directory to the local database directory is correctly specified in `docker-compose.yml`.
+Note: if you want to use the nightly version of Explorer, change the `image: kuzudb/explorer:latest` in the 
+`docker-compose.yml` file with `image: kuzudb/explorer:dev`.
 
 ```bash
+docker compose pull
 docker compose up
 ```
 
-ALternatively, you can run the following Docker command from the terminal, once again taking care to
+Alternatively, you can run the following Docker command from the terminal, once again taking care to
 ensure that the correct path to the local database directory is specified:
 
 ```bash
 docker run -p 8000:8000 \
-           -v ./accounts_kuzudb:/database \
+           -v ./ex_db_kuzu:/database \
            -e MODE=READ_ONLY \
            --rm kuzudb/explorer:latest
 ```
+If you want to use the nightly version of Explorer, replace the `--rm kuzudb/explorer:latest` with `--rm kuzudb/explorer:dev`. 
 
 ### Schema
 
