@@ -74,7 +74,7 @@ file into the Kùzu CLI shell editor and press `Enter`.
 Enter the DuckDB CLI at the root level of this repo by running the below command:
 
 ```bash
-duckdb ./accounts.duckdb
+duckdb ./ex_db.duckdb
 ```
 
 In the CLI, simply copy-paste the contents of the [`ddl/insert_data_duckdb.sql`](./ddl/insert_data_duckdb.sql)
