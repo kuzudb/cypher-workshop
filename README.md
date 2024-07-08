@@ -63,7 +63,7 @@ of a statement.
 Enter the Kùzu CLI at the root level of this repo by running the below command:
 
 ```bash
-kuzu ./accounts_kuzu
+kuzu ./ex_db_kuzu
 ```
 
 In the CLI, simply copy-paste the contents of the [`ddl/insert_data_kuzu.cypher`](./ddl/insert_data_kuzu.cypher)
