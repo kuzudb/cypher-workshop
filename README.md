@@ -96,7 +96,7 @@ This completes the DDL and you are now ready to query either database!
 
 The following queries are to be asked, for which we need to use Cypher in Kùzu and SQL in DuckDB:
 
-- Q1: Find all possible direct transfers between two accounts owned by persons with emails `georodaw366@hotmail.com` and `ezimmerman@yahoo.com`
+- Q1: Find all direct transfers to the user with the account `georodaw366@hotmail.com`
 - Q2: Find all possible connections of type Transfer, including indirect ones up to length k = 5, between the accounts owned by `georodaw366@hotmail.com` and - `ezimmerman@yahoo.com`. You can try k > 5 to also see how the number of paths increases rapidly.
 - Q3: Find the shortest connections of type Transfer between the accounts owned by `georodaw366@hotmail.com` and `ezimmerman@yahoo.com`
 - Q4: Find all connections of any type between the persons `georodaw366@hotmail.com` and `ezimmerman@yahoo.com`. We are searching for any possible shortest paths between these two persons, not just the transfers between accounts owned by them.
